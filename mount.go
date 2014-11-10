@@ -3,9 +3,6 @@ package mount
 import "net/http"
 import "strings"
 
-// Middleware constructor.
-type Constructor func(http.Handler) http.Handler
-
 // New mount middleware.
 func New(prefix string, i interface{}) func(http.Handler) http.Handler {
 	mw := middleware(i)
